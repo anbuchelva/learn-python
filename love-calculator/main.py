@@ -5,9 +5,7 @@ name2 = input("What is their name? \n")
 # 🚨 Don't change the code above 👆
 
 #Write your code below this line 👇
-name1 = name1.lower()
-name2 = name2.lower()
-name = name1 + name2
+name = name1.lower() + name2.lower()
 # print(name)
 
 true = 0
