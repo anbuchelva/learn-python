@@ -1,8 +1,8 @@
-import turtle 
+import turtle
 import random as r
 
 tim = turtle.Turtle()
-color = ["vilot", "blue", "green", "yellow", "orange", "red"]
+color = ["black", "blue", "green", "orange", "red"]
 
 def draw_shape(num_sides):
   angle = 360 / num_sides
@@ -13,3 +13,6 @@ def draw_shape(num_sides):
 for shape in range(3,11):
   tim.color(r.choice(color))
   draw_shape(shape)
+
+screen = turtle.Screen()
+screen.exitonclick()
