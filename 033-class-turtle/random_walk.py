@@ -14,13 +14,14 @@ def random_color():
     g = random.randint(0, 255)
     b = random.randint(0, 255)
     color = (r, g, b)
+    # print(color)
     return color
 
 
 def move_a_step():
     direction = random.choice(directions)
     tim.setheading(direction)
-    tim.color(random.choice(random_color()))
+    tim.color(random_color())
     tim.forward(20)
 
 
@@ -29,7 +30,3 @@ for _ in range(400):
 
 screen = t.Screen()
 screen.exitonclick()
-
-
-
-
