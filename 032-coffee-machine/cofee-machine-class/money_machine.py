@@ -20,6 +20,7 @@ class MoneyMachine:
     def process_coins(self):
         """Returns the total calculated from coins inserted."""
         print("Please insert coins.")
+        self.money_received = 0
         for coin in self.COIN_VALUES:
             self.money_received += int(input(f"How many {coin}?: ")) * self.COIN_VALUES[coin]
         return self.money_received
