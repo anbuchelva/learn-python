@@ -1,4 +1,4 @@
-#==============================================================================
+# ==============================================================================
 #  import csv
 #
 #  with open("weather_data.csv") as weather_data:
@@ -10,7 +10,7 @@
 #             temperature.append(int(row[1]))
 #
 #  print(temperature)
-#==============================================================================
+# ==============================================================================
 
 import pandas
 
@@ -50,7 +50,7 @@ print(data[data.temp == data.temp.max()])
 ## Get Monday's temperature in 'F
 monday_temp = data[data.day == "Monday"]
 monday_temp_celcius = int(monday_temp.temp)
-monday_temp_farenheit = (monday_temp_celcius * 9/5) + 32
+monday_temp_farenheit = (monday_temp_celcius * 9 / 5) + 32
 print(monday_temp_farenheit)
 
 ## Dictionary to CSV
