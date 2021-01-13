@@ -19,10 +19,7 @@ while correct_answer_count != 50:
     # print(states_data.state)
     # print(answer_state in states_data.state.tolist())
     if answer_state == "Exit":
-        missing_states = []
-        for state in all_states:
-            if state not in correct_answers:
-                missing_states.append(state)
+        missing_states = [state for state in all_states if state not in correct_answers]
         missing_states_df = pandas.DataFrame(missing_states)
         missing_states_df.to_csv("missing_states.csv")
         break
