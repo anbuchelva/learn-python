@@ -1,6 +1,6 @@
 import turtle
 import pandas
-from state_name import State_Name
+from state_name import StateName
 
 screen = turtle.Screen()
 screen.title("U.S. States Game")
@@ -28,7 +28,7 @@ while correct_answer_count != 50:
         break
 
     if answer_state in all_states:
-        state_name = State_Name()
+        state_name = StateName()
         state_x = int(states_data[states_data.state == answer_state].x)
         state_y = int(states_data[states_data.state == answer_state].y)
         state_name.update_state_name(answer_state, state_x, state_y)
@@ -36,5 +36,3 @@ while correct_answer_count != 50:
             correct_answer_count += 1
             correct_answers.append(answer_state)
     input_box_title = f"{correct_answer_count}/50 States Correct"
-
-
