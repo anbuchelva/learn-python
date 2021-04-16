@@ -13,10 +13,9 @@ def send_email():
     with smtp_library.SMTP(host="smtp.gmail.com") as conn:
         conn.starttls()
         conn.login(user=my_email, password=my_password)
-        conn.sendmail(
-            from_addr=my_email,
-            to_addrs="abc@gmail.com",
-            msg=f"Subject:Monday Morning Quote\n\n{random_quote}")
+        conn.sendmail(from_addr=my_email,
+                      to_addrs="abc@gmail.com",
+                      msg=f"Subject:Monday Morning Quote\n\n{random_quote}")
 
 
 now = dt.datetime.now()
