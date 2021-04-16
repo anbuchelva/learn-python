@@ -39,6 +39,14 @@ tests = ["pytest", "pytest-cov"]
 
 [[package]]
 category = "main"
+description = "A cross-platform clipboard module for Python. (Only handles plain text for now.)"
+name = "pyperclip"
+optional = false
+python-versions = "*"
+version = "1.8.2"
+
+[[package]]
+category = "main"
 description = "Extensions to the standard Python datetime module"
 name = "python-dateutil"
 optional = false
@@ -73,7 +81,7 @@ python-versions = "*"
 version = "0.2.5"
 
 [metadata]
-content-hash = "0cb16ea2491c058b5795aa724426ce76ccc3e60ddd45b19e5bef8c2327a9682c"
+content-hash = "77a882c283265e43ae0ed45e70c8ed1368dc8737583bd114496189aad7445b48"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -135,6 +143,9 @@ pandas = [
 prettytable = [
     {file = "prettytable-2.0.0-py3-none-any.whl", hash = "sha256:5dc7fcaca227f48deacd86958ae9d7b8c31a186fcb354bbb066763f20adf3eb9"},
     {file = "prettytable-2.0.0.tar.gz", hash = "sha256:e37acd91976fe6119172771520e58d1742c8479703489321dc1d9c85e7259922"},
+]
+pyperclip = [
+    {file = "pyperclip-1.8.2.tar.gz", hash = "sha256:105254a8b04934f0bc84e9c24eb360a591aaf6535c9def5f29d92af107a9bf57"},
 ]
 python-dateutil = [
     {file = "python-dateutil-2.8.1.tar.gz", hash = "sha256:73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c"},

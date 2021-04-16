@@ -8,6 +8,7 @@ authors = ["anbuchelva user <anbuchelva@gmail.com>"]
 python = "^3.8"
 pandas = "^1.2.0"
 prettytable = "^2.0.0"
+pyperclip = "^1.8.2"
 
 [tool.poetry.dev-dependencies]
 
