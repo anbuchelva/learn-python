@@ -46,6 +46,6 @@ class FlightSearch:
         results = response.json()['data']
         # pprint(results)
         for result in results:
-            print(f"{to_city}, $ {result['price']}")
+            # print(f"{to_city}, $ {result['price']}")
             return result['price']
 
