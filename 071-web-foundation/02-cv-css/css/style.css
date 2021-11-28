@@ -9,12 +9,23 @@ hr{
     width: 6%;
     
 }
-img {
+.avatar {
     border-radius: 50%;
 }
+
+img:hover{
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transition-duration: 2s;    
+}
+
 h1{
     color: #66BFBF;
 }
 h3{
     color: #66BFBF;
+}
+
+.zoom:hover{
+    font-size: 110%;
 }
