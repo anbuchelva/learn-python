@@ -16,7 +16,13 @@ movie_list = []
 for movie in movies:
     movie_list.append(movie.text)
 
-total_movies = len(movie_list)
-for i in range(total_movies):
-    i += 1
-    print(movie_list[total_movies - i])
+movie_list = movie_list[::-1]
+# Other option to sort the list 
+# total_movies = len(movie_list)
+# for i in range(total_movies):
+#     i += 1
+#     print(movie_list[total_movies - i])
+
+with open("top100-movies.txt","w") as file:
+    for movie in movie_list:
+        file.write(f"{movie}\n")
