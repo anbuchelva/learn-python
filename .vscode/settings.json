@@ -2,4 +2,7 @@
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
     "python.pythonPath": "/usr/bin/python3"
+    "editor.fontFamily": "'JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.lineHeight": 1.2
 }
