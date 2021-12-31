@@ -4,7 +4,7 @@
 }
 
 .container-fluid {
-    padding: 3% 15% !important;
+    padding: 3% 15% 7%;
 }
 
 h1 {
@@ -56,12 +56,21 @@ body {
 
 .title-img {
     width: 60%;
-    transform: rotate(20deg);
+    transform: rotate(25deg);
+    position: absolute;
+    right: 25%;
+}
+
+.iphone-container {
+    position: relative;
 }
 
 #features {
+    background-color: #fff;
     text-align: center;
     padding: 7% 15%;
+    position: relative;
+    /* z-index: 1; */
 }
 
 .fa-features {
@@ -120,4 +129,15 @@ body {
 .card-header {
     font-size: 1.2rem;
     font-weight: 900;
+}
+
+@media (max-width: 1028px) {
+    .title-img {
+        position: relative;
+        transform: rotate(0deg);
+        right: auto;
+    }
+    #title {
+        text-align: center;
+    }
 }
