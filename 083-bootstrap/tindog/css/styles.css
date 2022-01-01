@@ -1,31 +1,54 @@
-#title {
-    background-color: #ff4c68;
-    color: white;
+/* header sections */
+
+body {
+    font-family: Montserrat;
+    text-align: center;
 }
 
-.container-fluid {
-    padding: 3% 15% 7%;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Montserrat, 'sans-serif';
+    font-weight: 900;
 }
 
-h1 {
+
+/* heading section */
+
+.big-heading {
     font-family: 'Montserrat', 'sans-serif';
     font-size: 3.5rem;
     font-weight: 900;
     line-height: 1.5;
 }
 
-h2 {
-    font-family: Montserrat;
-    font-weight: 900;
+.section-heading {
     font-size: 3rem;
     line-height: 1.5;
 }
 
-h3 {
-    font-family: 'Montserrat', 'sans-serif';
+.feature-heading {
     font-size: 1.5rem;
-    font-weight: 900;
 }
+
+.container-fluid {
+    padding: 7% 15%;
+}
+
+.colored-section {
+    background-color: #ff4c68;
+    color: white;
+}
+
+.white-section {
+    background-color: #fff;
+}
+
+
+/* navigation */
 
 .navbar {
     padding-bottom: 4.5rem;
@@ -46,12 +69,16 @@ h3 {
     font-size: 1.2rem;
 }
 
-body {
-    font-family: Montserrat;
-}
-
 .download-btn {
     margin: 5% 3% 5% 0;
+}
+
+
+/* title section */
+
+#title .container-fluid {
+    padding: 3% 15% 7%;
+    text-align: left;
 }
 
 .title-img {
@@ -65,10 +92,10 @@ body {
     position: relative;
 }
 
+
+/* features section */
+
 #features {
-    background-color: #fff;
-    text-align: center;
-    padding: 7% 15%;
     position: relative;
     /* z-index: 1; */
 }
@@ -90,9 +117,12 @@ body {
 /* Testimonial Sections */
 
 #testimonials {
-    text-align: center;
     background-color: #ef8172;
-    color: #fff;
+}
+
+.testimonial-text {
+    font-size: 3rem;
+    line-height: 1.5;
 }
 
 .testimonial-image {
@@ -101,17 +131,12 @@ body {
     width: 10%;
 }
 
-.carousel-item {
-    padding: 7% 15%;
-}
-
 
 /* Press section */
 
 #press {
     background-color: #ef8172;
     padding-bottom: 3%;
-    text-align: center;
 }
 
 .press-logo {
@@ -124,6 +149,11 @@ body {
 
 #pricing {
     padding: 100px;
+}
+
+.pricing-text {
+    font-size: 3rem;
+    line-height: 1.5;
 }
 
 .card-header {
@@ -143,21 +173,7 @@ body {
 }
 
 
-/* CTA */
-
-#cta {
-    background-color: #ff4c68;
-    padding: 5% 15%;
-    line-height: 1.5rem;
-    text-align: center;
-    color: #fff;
-}
-
-#footer {
-    text-align: center;
-    padding: 7% 15% 5%;
-    color: #8f8f8f;
-}
+/* footer section */
 
 .footer-social {
     font-size: 1.5rem;
