@@ -1,8 +1,9 @@
 import requests
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import os
 from datetime import datetime
 from post import Post
+from telegram import send_message
 
 app = Flask(__name__, root_path=os.getcwd())
 endpoint = 'https://api.npoint.io/f6a68cce2c012b111224'
@@ -36,6 +37,22 @@ def show_post(index):
             requested_post = blog_post
             print(blog_post.title)
             return render_template("post.html", post=requested_post)
+
+
+@app.route('/contact', methods=['POST', 'GET'])
+def receive_data():
+    print(request.method)
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        phone = request.form['phone']
+        message = request.form['message']
+        message_text = f"Name: {name}\nEmail: {email}\nPhone: {phone}\nMessage: {message}"
+        send_message(message_text)
+        # return '<h1> Successfully Sent your message!</h1>'
+        return render_template('contact.html', h1_message='Successfully Sent your message!')
+    else:
+        return render_template('contact.html', h1_message='Contact Me')
 
 
 if __name__ == "__main__":
