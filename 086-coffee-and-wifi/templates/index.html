@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Coffee and Wifi
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-0 d-flex" style="background-color:#2C3639; height:100vh">
+    <div class="container-fluid py-5 my-auto text-center text-light" style="background-color:#3F4E4F ;">
+        <h1>
+            <div class="display-3 py-3">☕ Coffee and Wifi 💻</div>
+        </h1>
+        <h4>
+            Want to work in a cafe but need power and wifi?
+        </h4>
+        <p class="px-5 py-3">You've found the right place! Checkout my collection of cafes with data on power
+            socket
+            availability, wifi speed
+            and coffee quality.</p>
+        <a href="{{ url_for('cafes') }}"><div class="btn btn-danger">Show me!</div></a>
+    </div>
+</div>
+
+
+{% endblock %}

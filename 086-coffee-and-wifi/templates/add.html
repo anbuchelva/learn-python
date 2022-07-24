@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Add A New Cafe
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid text-light px-0" style="background-color:#2C3639; height: 100vh;">
+    <div class="container-fluid px-0 px-3 py-3" style="background-color:#3F4E4F;">
+        <h1>
+            <div class="display-3">Add a new cafe into the database</div>
+        </h1>
+    </div>
+    <div class="container col-sm-12 col-md-4 col-lg-5 py-3">
+        {{wtf.quick_form(form)}}
+        <p class="space-above"><a href="#">See all cafes</a></p>
+    </div>
+</div>
+
+{% endblock %}

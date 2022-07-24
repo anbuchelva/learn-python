@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Cafes List
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid text-light px-0" style="background-color:#2C3639; height: 100vh;">
+    <div class="container-fluid px-0 px-3 py-3" style="background-color:#3F4E4F;">
+        <h1>
+            <div class="display-3">Add a new cafe into the database</div>
+        </h1>
+    </div>
+    <div class="container py-3">
+        <table class="table, table-striped w-100">
+            {% for row in data %}
+            <tr>
+                {% for item in row %}
+                {% if item[0:4] == "http" %}
+                <td><a href="{{ item }}">Maps Link</a></td>
+                {% else %}
+                <td>{{ item }}</td>
+                {% endif %}
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="{{url_for('home')}}">Return to Index Page</a>
+    </div>
+</div>
+{% endblock %}
