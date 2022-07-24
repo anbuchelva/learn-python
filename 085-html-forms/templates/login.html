@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block title %}
+Welcome to my secrets!
+{% endblock %}
+
+{% block content %}
+<a href="/">Home</a>
+<div class="container py-5 col-lg-4 col-md-5 col-sm-7">
+    <div class="card">
+        <h5 class="card-header">Login</h5>
+        <div class="card-body">
+            <h5 class="card-title">Login to find the secrets!</h5>
+            <p class="card-text">You need to login to find the secrets!</p>
+            <form method="post">
+                {{ form.csrf_token }}
+                {{wtf.form_field(form.name)}}
+                {{wtf.form_field(form.email)}}
+                {{wtf.form_field(form.password)}}
+                {{wtf.form_field(form.submit, class='btn btn-primary w-100 py-2 my-3')}}
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
