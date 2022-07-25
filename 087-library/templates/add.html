@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Add Book</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <form action="" method="POST">
+    <h1>Add Book to the Database</h1>
+    <form action="{{ url_for('add') }}" method="POST">
         <label>Book Name</label>
-        <input type="text">
+        <input type="text" name="book">
+        <br>
         <label>Book Author</label>
-        <input type="text">
+        <input type="text" name="author">
+        <br>
         <label>Rating</label>
-        <input type="text">
+        <input type="text" name="rating">
+        <br>
         <button type="submit">Add Book</button>
     </form>
 </body>

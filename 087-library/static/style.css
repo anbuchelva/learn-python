@@ -1,0 +1,43 @@
+body{
+    font-family: "Noto Sans", sans-serif;
+    width: 100%
+}
+input{
+    width: 200px;
+}
+label{
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+}
+button{
+    margin-left: 88px;
+    margin-top: 10px;
+    padding: 5px 20px;
+}
+
+th {
+  text-align: left;
+  width: 100px;
+  background-color: #D3D3D3;
+}
+.title {
+    width: 250px;
+}
+.center{
+text-align: center;
+}
+table, th, td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 4px;
+}
+a:link {
+  text-decoration: none;
+}
+button{
+margin-left: 0;
+}
+p{
+margin: 0;
+}

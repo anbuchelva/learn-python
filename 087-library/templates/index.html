@@ -3,13 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Library</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-<h1>My Library</h1>
-    <ul>
-        <li></li>
-    </ul>
-    
-<a href="">Add New Book</a>
+<h1>My Books Library</h1>
+{% if data %}
+
+<table>
+    <tr>
+        <th class="title">Title</th>
+        <th>Author</th>
+        <th class="center">Rating (of 5)</th>
+        <th class="center">Edit</th>
+        <th class="center">Delete</th>
+    </tr>
+    {% for item in data %}
+    <tr>
+        <td>{{item['title']}}</td>
+        <td>{{item['author']}}</td>
+        <td class="center">{{item['rating']}}</td>
+        <td class="center"><a href="{{ url_for('edit', id=item.id) }}">✏</a>️</td>
+        <td class="center"><a href="{{ url_for('delete', id=item.id) }}">🗑️️</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% else %}
+Library is empty!
+{% endif %}
+<br>
+
+<a href="{{url_for('add')}}"><button>Add New Book</button></a>
 </body>
 </html>

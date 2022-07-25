@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Rating</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<h1>Edit Rating of {{ data.title }}</h1>
+<form action="{{ url_for('edit') }}" method="POST">
+    <p><label>Book Name</label>{{ data.title }}</p>
+    <p><label>Book Author</label>{{ data.author }}</p>
+    <input type="hidden" name="id" value="{{ data.id }}">
+    <p><label>Rating</label> <input type="text" name="rating" value="{{ data.rating }}"></p>
+    <button type="submit">Edit Rating</button>
+</form>
+</body>
+</html>
